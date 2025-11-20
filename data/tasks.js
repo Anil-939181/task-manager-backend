@@ -1,4 +1,9 @@
-let tasks = [];
-let currentId = 1;
+const mongoose = require("mongoose");
 
-module.exports = { tasks, currentId };
+const taskSchema = new mongoose.Schema({
+  name: String,
+  description: String,
+  isCompleted: Boolean
+});
+
+module.exports = mongoose.model("Task", taskSchema);

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Task = require("../models/task.model");   // Import model
+const Task = require("../data/tasks");   // Import model
 
 
 router.put("/", async (req, res) => {
